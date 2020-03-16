@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <title>Formulário Elogroup</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" type="text/css" href="./css/form.css">
+    <link rel="icon" type="image/png" href="img/icons/favicon-32x32.png" />
+
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">     
+    
+    <script src="js/form.js"></script>
+
+</head>
+
+<body>
+
+    <div class="container-background">
+        <div class="wrap-contato01">
+            <form class="elo-form validate-form">
+                <img src="img/logo.png" />
+                <!--
+				<span class="elo-form-title">
+					Queremos conhecer você!
+                </span>-->
+
+                <label class="label-input-elo" for="first-name">Insira seu nome e sobrenome:</label>
+                <div class="wrap-input-elo rs1-wrap-input-elo validate-input" data-validate="Type first name">
+                    <input id="first-name" class="input-elo" type="text" name="first-name" placeholder="Nome" required minlength="3">
+                    <span class="focus-input-elo"></span>
+                </div>
+
+                <div class="wrap-input-elo rs2-wrap-input-elo validate-input" data-validate="Type last name">
+                    <input class="input-elo" type="text" name="last-name" placeholder="Sobrenome" required
+                        minlength="3">
+                    <span class="focus-input-elo"></span>
+                </div>
+
+                <label class="label-input-elo" for="phone">Insira seu número de telefone:</label>
+                <div class="wrap-input-elo">
+                    <input id="phone" class="input-elo" type="text" name="phone" placeholder="(xx) xxxxx-xxxx" required>
+                    <span class="focus-input-elo"></span>
+                </div>
+
+                <label class="label-input-elo" for="meet">Como nos conheceu?</label>
+                <div class="wrap-input-elo">
+                    <select id="meet">
+                        <option value="Google">Google</option>
+                        <option value="RedesSociais">Redes Sociais</option>
+                        <option value="Amigos">Indicação de Amigos</option>
+                        <option value="Outro">Outro</option>
+                    </select>
+                    <span class="focus-input-elo"></span>
+                </div>
+
+                <label class="label-input-elo" id="social">Possui redes sociais?</label>
+                <div class="wrap-input-elo">
+
+                    <input type="radio" id="sim" name="social" value="sim">
+                    <label for="sim">Sim</label>
+
+                    <div id="outros" style="flex-direction: row;">
+                        <div class="checkboxes" id="checkboxes" style="display: none;">
+                            <input type="checkbox" id="facebook" onclick="checkFiltros()" name="facebook">
+                            <label for="facebook">Facebook</label><br>
+                            <input type="checkbox" id="instagram" onclick="checkFiltros()" name="instagram">
+                            <label for="instagram">Instagram</label> <br>
+                            <input type="checkbox" id="twitter" onclick="checkFiltros()" name="twitter">
+                            <label for="twitter">Twitter</label><br>
+                            <input type="checkbox" id="linkedin" onclick="checkFiltros()" name="linkedin">
+                            <label for="linkedin">Linkedin</label><br>
+
+                        </div>
+                    </div>
+
+
+                    <input type="radio" id="Nao" name="social" value="Nao">
+                    <label for="Nao">Nao</label><br>
+                    <span class="focus-input-elo"></span>
+                </div>
+
+
+                <div class="container-contato-form-btn">
+                    <button class="contato-form-btn">
+                        Enviar
+                    </button>
+                </div>
+            </form>
+
+            <div class="info flex-col-c-m" style="background-image: url('img/computer-01.png');">
+                <div class="flex-w size1 p-b-47">
+                    <div class="txt1 p-r-25">
+                        <span class="lnr lnr-map-marker"></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        
+        <!--SCRIPTS====================================================================================-->
+        <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+        <script src="vendor/jquery/jquery.validate.min.js"></script>
+
+        <script>
+            $(function () {
+                $("#elo-form").validate({
+
+                    rules:{
+                        first-name:{
+                             required: true
+		                        minlength: 3
+                        },
+                        last-name:{
+                            required: true
+		                    minlength: 3
+                        },
+                        phone:{
+                            required: true
+                            minlength: 6
+                        }
+                    },
+
+                    messages:{
+                        first-name:{
+                            required: "Digite seu nome."
+                        },
+                        last-name: {
+                            required: "Digite seu sobrenome."
+                        }
+                    }    
+                });
+        });
+        </script>        
+
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+         <script src="js/form.js"></script>
+
+</body>
